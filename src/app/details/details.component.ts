@@ -46,7 +46,7 @@ export class DetailsComponent implements OnInit {
     const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     this.today = days[todayNumberInWeek];
 
-    this.activeRouter.param.subscribe((route: any) => {
+    this.activeRouter.paramMap.subscribe((route: any) => {
       this.city = route.params.city;
       this.weather.getWeatherState(this.city).subscribe((state) => this.state = state);
       this.weather.getCurrentTemp(this.city).subscribe((temperature) => this.temp = temperature);

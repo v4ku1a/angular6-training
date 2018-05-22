@@ -47,9 +47,8 @@
   </header>
 
   <main class="main-continer">
-    <div class="main-container-bg" [ngClass]="{'main-container-bg-dark': darkModeActive}">
-      <!-- <app-home></app-home> -->
-    </div>
+    <div class="main-container-bg" [ngClass]="{'main-container-bg-dark': darkModeActive}"></div>
+    <router-outlet></router-outlet>
   </main>
 
   <footer class="main-footer">
